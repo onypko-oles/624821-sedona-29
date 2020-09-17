@@ -1,12 +1,266 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Седона - Главная страница</title>
   </head>
   <body>
+    <header>
+      <nav>
+        <a>
+          <img
+            src="img/logo.svg"
+            width="170"
+            height="70"
+            alt="Логотип сайта городка Седона"
+          />
+        </a>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+        <ul>
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="media.html">Фото и видео</a></li>
+          <li><a href="#map-anchor">Карта штата</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <main>
+      <h1 class="visually-hidden">
+        Главная страница городка Седона в Аризоне
+      </h1>
+
+      <!-- Приветствие -->
+      <section>
+        <h2 class="visually-hidden">Приветствие</h2>
+
+        <p>
+          Welcome to the gorgeous Sedona <q>Because the Grand Canyon sucks!</q>
+        </p>
+
+        <img
+          src="img/welcome-bg.jpg"
+          alt="Скалистая местность Седоны"
+          width="1200"
+          height="509"
+        />
+      </section>
+
+      <!-- Преимущества городка -->
+      <section>
+        <h2 class="visually-hidden">Преимущества городка</h2>
+
+        <p>
+          Седона — небольшой городок в Аризоне, заслуживающий большего!
+        </p>
+
+        <p>
+          Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
+        </p>
+
+        <ol>
+          <li>
+            <h3>Настоящий городок</h3>
+            <p>
+              Седона - не аттракцион для туристов, там течёт своя жизнь
+            </p>
+            <img
+              src="img/advantage-1.jpg"
+              alt="Мотель в Седоне"
+              width="800"
+              height="256"
+            />
+          </li>
+          <li>
+            <h3>Там есть мост дьявола</h3>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <img
+              src="img/advantage-2.jpg"
+              alt="Мост дьявола"
+              width="800"
+              height="256"
+            />
+          </li>
+          <li>
+            <h3>Небольшая площадь</h3>
+            <p>
+              Все достопримечательности находятся очень близко
+            </p>
+          </li>
+          <li>
+            <h3>Красивая дорога</h3>
+            <p>
+              Ехать в седону из Лас-Вегаса совсем не скучно!
+            </p>
+          </li>
+          <li>
+            <h3>Мало туристов</h3>
+            <p>Большинство едет в гранд каньон и толпится там</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Предложения от городка -->
+      <section>
+        <h2 class="visually-hidden">Предложения от городка</h2>
+
+        <ul>
+          <li>
+            <h3>Жилье</h3>
+            <p>
+              Рекомендуем пожить в настоящем мотеле, всё как в кино!
+            </p>
+          </li>
+          <li>
+            <h3>Еда</h3>
+            <p>
+              Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+            </p>
+          </li>
+          <li>
+            <h3>Сувениры</h3>
+            <p>
+              Не только китайского, но и местного производства!
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Форма для поиска гостиницы -->
+      <section>
+        <h2 class="visually-hidden">Форма для поиска гостиницы</h2>
+
+        <p>Заинтересовались?</p>
+
+        <p>
+          Укажите предполагаемые даты поездки, и мы покажем вам лучшие
+          предложения гостиниц в седоне
+        </p>
+
+        <button>
+          Поиск гостиницы в Седоне
+        </button>
+
+        <form action="#" method="get">
+          <p>
+            <label for="date-of-arrival">Дата заезда</label>
+            <input id="date-of-arrival" name="date-of-arrival" type="date" />
+            <button id="js-date-of-arrival">
+              <span class="visually-hidden">Календарь</span>
+            </button>
+          </p>
+
+          <p>
+            <label for="date-of-departure">Дата выезда</label>
+            <input
+              id="date-of-departure"
+              name="date-of-departure"
+              type="date"
+            />
+            <button id="js-date-of-departure">
+              <span class="visually-hidden">Календарь</span>
+            </button>
+          </p>
+
+          <p>
+            <label for="adults">Взрослые</label>
+            <input id="adults" name="adults" type="number" min="0" value="2" />
+          </p>
+
+          <p>
+            <label for="kids">Дети</label>
+            <input id="kids" name="kids" type="number" min="0" value="0" />
+          </p>
+
+          <button type="submit">Найти</button>
+        </form>
+      </section>
+
+      <!-- Местоположение на карте -->
+      <section id="map-anchor">
+        <h2 class="visually-hidden">Местоположение на карте</h2>
+
+        <img src="img/sedona-map.png" alt="Местоположение на карте" />
+      </section>
+    </main>
+
+    <footer>
+      <!-- Хештег -->
+      <dl>
+        <dt class="visually-hidden">Хештег в Инстаграме</dt>
+        <dd>
+          <a
+            href="https://www.instagram.com/explore/tags/visitsedona/"
+            target="_blank"
+            aria-label="Ссылка на фотографии Седоны в Инстаграме"
+          >
+            #visitsedona
+          </a>
+        </dd>
+      </dl>
+
+      <!-- Контакты -->
+      <section>
+        <h2 class="visually-hidden">Контакты</h2>
+
+        <dl>
+          <dt>Тел:</dt>
+          <dd>
+            <address>
+              <a href="tel:74956660166">
+                +7(495) 666-01-66
+              </a>
+            </address>
+          </dd>
+        </dl>
+      </section>
+
+      <!-- Социальные сети -->
+      <section>
+        <h2 class="visually-hidden">Социальные сети</h2>
+
+        <ul>
+          <li>
+            <a href="#">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Copyright -->
+      <dl>
+        <dt class="visually-hidden">Copyright:</dt>
+        <dd>
+          <p>
+            Website by
+
+            <a
+              href="https://htmlacademy.ru/intensive/htmlcss"
+              target="_blank"
+              aria-label="Ссылка на интенсив Академии"
+            >
+              <img
+                src="img/copyright.svg"
+                alt="Копирайт"
+                width="114"
+                height="40"
+              />
+            </a>
+          </p>
+        </dd>
+      </dl>
+    </footer>
   </body>
 </html>
