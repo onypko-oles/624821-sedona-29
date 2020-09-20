@@ -26,43 +26,221 @@
     </header>
 
     <main>
-      <h1>
-        Гостиницы в Седоне
+      <h1 class="visually-hidden">
+        Поиск гостиницы в Седоне
       </h1>
+
+      <section>
+        <h2 class="visually-hidden">Фильтры</h2>
+
+        <form action="#" method="get">
+          <fieldset>
+            <legend>Инфраструктура</legend>
+
+            <input
+              type="checkbox"
+              name="filters-form-pool"
+              id="filters-form-pool"
+              checked
+            />
+            <label for="filters-form-pool">Бассейн</label>
+
+            <input
+              type="checkbox"
+              name="filters-form-parking"
+              id="filters-form-parking"
+            />
+            <label for="filters-form-parking">Парковка</label>
+
+            <input
+              type="checkbox"
+              name="filters-form-wifi"
+              id="filters-form-wifi"
+            />
+            <label for="filters-form-wifi">Wi-Fi</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Тип жилья</legend>
+
+            <input
+              type="checkbox"
+              name="filters-form-hotel"
+              id="filters-form-hotel"
+              checked
+            />
+            <label for="filters-form-hotel">Гостиница</label>
+
+            <input
+              type="checkbox"
+              name="filters-form-motel"
+              id="filters-form-motel"
+              checked
+            />
+            <label for="filters-form-motel">Мотель</label>
+
+            <input
+              type="checkbox"
+              name="filters-form-apartments"
+              id="filters-form-apartments"
+              checked
+            />
+            <label for="filters-form-apartments">Апартаменты</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Стоимость в сутки</legend>
+
+            <p>От <output id="fromPrice">0</output></p>
+            <p>До <output id="toPrice">4000</output></p>
+
+            <label class="visually-hidden" for="fromPriceFilter"
+              >Цена гостиницы от</label
+            >
+            <input
+              type="range"
+              id="fromPriceFilter"
+              name="filters-form-slider1"
+              min="0"
+              max="5000"
+              value="0"
+              oninput="fromPrice.value = fromPriceFilter.value"
+            />
+
+            <label class="visually-hidden" for="toPriceFilter"
+              >Цена гостиницы до</label
+            >
+            <input
+              type="range"
+              id="toPriceFilter"
+              name="filters-form-slider2"
+              min="0"
+              max="5000"
+              value="4000"
+              oninput="toPrice.value = toPriceFilter.value"
+            />
+          </fieldset>
+
+          <button type="submit">Показать</button>
+        </form>
+      </section>
+
+      <section>
+        <h2 class="visually-hidden">
+          Результаты поиска
+        </h2>
+
+        <p>Найдено: 3</p>
+
+        <section>
+          <h2>Сортировка</h2>
+
+          <ul>
+            <li><a class="active" href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По рейтингу</a></li>
+          </ul>
+
+          <ul>
+            <li>
+              <a class="active" href="#">
+                <span class="visually-hidden">По возрастанию</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="visually-hidden">По убыванию</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="visually-hidden">Найденные гостиницы</h2>
+
+          <!-- ol потому что порядок имеет значения (фильтр сотрировки asc-desc) -->
+          <ol>
+            <li>
+              <article>
+                <h3>Amara Resort & Spa</h3>
+                <img src="img/hotel-1.jpg" alt="Изображение гостиницы" />
+
+                <p>Гостиница от 4000 Р.</p>
+                <p>Рейтинг: 8,5</p>
+
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </article>
+            </li>
+            <li>
+              <article>
+                <h3>Desert Quail Inn</h3>
+                <img src="img/hotel-2.jpg" alt="Изображение гостиницы" />
+
+                <p>Мотель от 3000 Р.</p>
+                <p>Рейтинг: 8,9</p>
+
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </article>
+            </li>
+            <li>
+              <article>
+                <h3>Villas at Poco Diablo</h3>
+                <img src="img/hotel-3.jpg" alt="Изображение гостиницы" />
+
+                <!-- 
+                  Вариант 2 
+                  Вопрос: Уместно ли использование dl тут? Или тоже оверхед? 
+                -->
+                <!-- 
+                  <dl>
+                    <div>
+                      <dt>Тип жилья</dt>
+                      <dd>Апартаменты</dd>
+                    </div>
+                    <div>
+                      <dt>Стоимость</dt>
+                      <dd>от 2000 Р.</dd>
+                    </div>
+                  </dl> 
+                -->
+
+                <p>Апартаменты от 2000 Р.</p>
+                <p>Рейтинг: 9,2</p>
+
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </article>
+            </li>
+          </ol>
+        </section>
+      </section>
     </main>
 
     <footer>
-      <!-- Хештег -->
-      <dl>
-        <dt class="visually-hidden">Хештег в Инстаграме</dt>
-        <dd>
-          <a
-            href="https://www.instagram.com/explore/tags/visitsedona/"
-            target="_blank"
-            aria-label="Ссылка на фотографии Седоны в Инстаграме"
-          >
-            #visitsedona
-          </a>
-        </dd>
-      </dl>
+      <!-- ХЕШТЕГ -->
+      <a
+        href="https://www.instagram.com/explore/tags/visitsedona/"
+        target="_blank"
+        aria-label="Ссылка на фотографии Седоны в Инстаграме"
+      >
+        #visitsedona
+      </a>
 
-      <!-- Контакты -->
+      <!-- КОНТАКТЫ -->
       <section>
         <h2 class="visually-hidden">Контакты</h2>
 
-        <dl>
-          <dt>Тел:</dt>
-          <dd>
-            <address>
-              <a href="tel:74956660166">
-                +7(495) 666-01-66
-              </a>
-            </address>
-          </dd>
-        </dl>
+        <address>
+          Тел:
+          <a href="tel:74956660166">
+            +7(495) 666-01-66
+          </a>
+        </address>
       </section>
 
-      <!-- Социальные сети -->
+      <!-- СОЦИАЛЬНЫЕ СЕТИ -->
       <section>
         <h2 class="visually-hidden">Социальные сети</h2>
 
@@ -85,28 +263,23 @@
         </ul>
       </section>
 
-      <!-- Copyright -->
-      <dl>
-        <dt class="visually-hidden">Copyright:</dt>
-        <dd>
-          <p>
-            Website by
+      <!-- COPYRIGHT -->
+      <p>
+        Website by
 
-            <a
-              href="https://htmlacademy.ru/intensive/htmlcss"
-              target="_blank"
-              aria-label="Ссылка на интенсив Академии"
-            >
-              <img
-                src="img/copyright.svg"
-                alt="Копирайт"
-                width="114"
-                height="40"
-              />
-            </a>
-          </p>
-        </dd>
-      </dl>
+        <a
+          href="https://htmlacademy.ru/intensive/htmlcss"
+          target="_blank"
+          aria-label="Ссылка на интенсив Академии"
+        >
+          <img
+            src="img/copyright.svg"
+            alt="Иконка HTML Academy"
+            width="114"
+            height="40"
+          />
+        </a>
+      </p>
     </footer>
   </body>
 </html>
