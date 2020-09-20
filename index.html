@@ -31,7 +31,7 @@
         Главная страница городка Седона в Аризоне
       </h1>
 
-      <!-- Приветствие -->
+      <!-- ПРИВЕТСТВИЕ -->
       <section>
         <h2 class="visually-hidden">Приветствие</h2>
 
@@ -47,7 +47,7 @@
         />
       </section>
 
-      <!-- Преимущества городка -->
+      <!-- ПРЕИМУЩЕСТВА ГОРОДКА -->
       <section>
         <h2 class="visually-hidden">Преимущества городка</h2>
 
@@ -59,7 +59,7 @@
           Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
         </p>
 
-        <ol>
+        <ul>
           <li>
             <h3>Настоящий городок</h3>
             <p>
@@ -71,6 +71,27 @@
               width="800"
               height="256"
             />
+
+            <ul aria-label="Предложения городка">
+              <li>
+                <h4>Жилье</h4>
+                <p>
+                  Рекомендуем пожить в настоящем мотеле, всё как в кино!
+                </p>
+              </li>
+              <li>
+                <h4>Еда</h4>
+                <p>
+                  Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                </p>
+              </li>
+              <li>
+                <h4>Сувениры</h4>
+                <p>
+                  Не только китайского, но и местного производства!
+                </p>
+              </li>
+            </ul>
           </li>
           <li>
             <h3>Там есть мост дьявола</h3>
@@ -98,36 +119,10 @@
             <h3>Мало туристов</h3>
             <p>Большинство едет в гранд каньон и толпится там</p>
           </li>
-        </ol>
-      </section>
-
-      <!-- Предложения от городка -->
-      <section>
-        <h2 class="visually-hidden">Предложения от городка</h2>
-
-        <ul>
-          <li>
-            <h3>Жилье</h3>
-            <p>
-              Рекомендуем пожить в настоящем мотеле, всё как в кино!
-            </p>
-          </li>
-          <li>
-            <h3>Еда</h3>
-            <p>
-              Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-            </p>
-          </li>
-          <li>
-            <h3>Сувениры</h3>
-            <p>
-              Не только китайского, но и местного производства!
-            </p>
-          </li>
         </ul>
       </section>
 
-      <!-- Форма для поиска гостиницы -->
+      <!-- ФОРМА ДЛЯ ПОИСКА ГОСТИНИЦЫ -->
       <section>
         <h2 class="visually-hidden">Форма для поиска гостиницы</h2>
 
@@ -177,7 +172,7 @@
         </form>
       </section>
 
-      <!-- Местоположение на карте -->
+      <!-- МЕСТОРАСПОЛОЖЕНИЕ НА КАРТЕ -->
       <section id="map-anchor">
         <h2 class="visually-hidden">Местоположение на карте</h2>
 
@@ -186,37 +181,28 @@
     </main>
 
     <footer>
-      <!-- Хештег -->
-      <dl>
-        <dt class="visually-hidden">Хештег в Инстаграме</dt>
-        <dd>
-          <a
-            href="https://www.instagram.com/explore/tags/visitsedona/"
-            target="_blank"
-            aria-label="Ссылка на фотографии Седоны в Инстаграме"
-          >
-            #visitsedona
-          </a>
-        </dd>
-      </dl>
+      <!-- ХЕШТЕГ -->
+      <a
+        href="https://www.instagram.com/explore/tags/visitsedona/"
+        target="_blank"
+        aria-label="Ссылка на фотографии Седоны в Инстаграме"
+      >
+        #visitsedona
+      </a>
 
-      <!-- Контакты -->
+      <!-- КОНТАКТЫ -->
       <section>
         <h2 class="visually-hidden">Контакты</h2>
 
-        <dl>
-          <dt>Тел:</dt>
-          <dd>
-            <address>
-              <a href="tel:74956660166">
-                +7(495) 666-01-66
-              </a>
-            </address>
-          </dd>
-        </dl>
+        <address>
+          Тел:
+          <a href="tel:74956660166">
+            +7(495) 666-01-66
+          </a>
+        </address>
       </section>
 
-      <!-- Социальные сети -->
+      <!-- СОЦИАЛЬНЫЕ СЕТИ -->
       <section>
         <h2 class="visually-hidden">Социальные сети</h2>
 
@@ -239,28 +225,23 @@
         </ul>
       </section>
 
-      <!-- Copyright -->
-      <dl>
-        <dt class="visually-hidden">Copyright:</dt>
-        <dd>
-          <p>
-            Website by
+      <!-- COPYRIGHT -->
+      <p>
+        Website by
 
-            <a
-              href="https://htmlacademy.ru/intensive/htmlcss"
-              target="_blank"
-              aria-label="Ссылка на интенсив Академии"
-            >
-              <img
-                src="img/copyright.svg"
-                alt="Копирайт"
-                width="114"
-                height="40"
-              />
-            </a>
-          </p>
-        </dd>
-      </dl>
+        <a
+          href="https://htmlacademy.ru/intensive/htmlcss"
+          target="_blank"
+          aria-label="Ссылка на интенсив Академии"
+        >
+          <img
+            src="img/copyright.svg"
+            alt="Иконка HTML Academy"
+            width="114"
+            height="40"
+          />
+        </a>
+      </p>
     </footer>
   </body>
 </html>
